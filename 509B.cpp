@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+typedef long long ll;
+typedef double ld;
+#define vll vector<ll>
+#define vvll vector< vll >
+#define vld vector< ld >
+#define vvld vector< vld >
+#define pll pair<ll ,ll >
+#define vllp vector< pll >
+#define MOD 1000000007
+#define endl "\n"
+#define MAX 1000000007
+#define nl <<endl
+#define f(i,a,b) for(i=a;i<b;i++)
+#define pb push_back
+#define mp make_pair
+#define F first
+#define S second
+using namespace std;
+
+int main()
+{
+	int n,k;
+	cin>>n>>k;
+	int a[n];
+	for (int i = 0; i < n; ++i)
+	{
+		cin>>a[i];
+	}
+
+	int mini=1000,maxi=-1;
+	for (int i = 0; i < n; ++i)
+	{
+		maxi=max(maxi,a[i]);
+		mini=min(mini,a[i]);
+	}
+	if(maxi-mini>k){cout<<"NO\n";return 0;}
+	cout<<"YES\n";
+	for (int i = 0; i < n; ++i)
+	{
+		for (int j = 0; j < a[i]; ++j)
+		{
+			cout<<(j%k)+1<<" ";
+		}
+		cout nl;
+	}
+
+
+}
